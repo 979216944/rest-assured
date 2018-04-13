@@ -115,6 +115,17 @@ public class ContentTypeTest {
             // Then
             assertThat(content, is(expected));
         }
+        
+        // added new test for null
+        @Test public void
+        should_find_content_type_from_null() {
+            // When
+            ContentType content = ContentType.fromContentType(null);
+            expected = null;
+
+            // Then
+            assertThat(content, is(expected));
+        }
     }
 
 }
