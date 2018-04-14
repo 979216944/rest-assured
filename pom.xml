@@ -211,9 +211,11 @@
                             <includes>
                                 <include>**/itest/**</include>
                             </includes>
-                            <argLine>-Xmx1024m</argLine>
-                            <argLine>-Dfile.encoding=UTF-8</argLine>
-                            <argLine>-Duser.language=en</argLine>
+                            <properties>
+                                <argLine>-Xmx1024m</argLine>
+                                <argLine>-Dfile.encoding=UTF-8</argLine>
+                                <argLine>-Duser.language=en</argLine>
+                            </properties>
                         </configuration>
                     </execution>
                 </executions>
@@ -233,6 +235,7 @@
                 <reportSets>
                     <reportSet>
                         <reports>
+                            <report>site</report>
                             <report>index</report>
                             <report>dependency-info</report>
                             <report>modules</report>
